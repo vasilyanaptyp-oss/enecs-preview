@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>enecs Archiv – Preview</title>
+  <meta name="description" content="Preview of the new enecs.com Archive: asymmetric editorial grid built from a snapshot of the enecs.com WordPress REST API.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://mlhh79yvxbcd.i.optimole.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@400&family=Open+Sans:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs><clipPath id="enecs-crop"><rect x="0" y="0" width="230" height="31"/></clipPath></defs>
+    <symbol id="enecs-logo" viewBox="0 0 230 80">
+      <text x="2" y="42" clip-path="url(#enecs-crop)" font-family="Jost, Futura, 'Century Gothic', sans-serif" font-weight="400" font-size="78" textLength="211" lengthAdjust="spacing" fill="currentColor">enecs</text>
+      <text x="37" y="57.5" font-family="'Open Sans', Helvetica, Arial, sans-serif" font-weight="300" font-size="15" textLength="177" lengthAdjust="spacingAndGlyphs" fill="currentColor">NEW ARCHITECTURE</text>
+      <path d="M36 66.5 H223.5 V40" fill="none" stroke="currentColor" stroke-width="1"/>
+    </symbol>
+  </svg>
+  <a class="skip" href="#main">Zum Inhalt</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#/archiv" aria-label="enecs – New Architecture">
+        <svg class="logo" viewBox="0 0 230 80" aria-hidden="true" focusable="false"><use href="#enecs-logo"/></svg>
+      </a>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="#/editionen" data-nav="editions" data-i18n="nav.editions">Editionen</a>
+        <a href="#/archiv" data-nav="archive" data-i18n="nav.archive">Archiv</a>
+        <a href="#/exklusiv" data-nav="exclusive" class="nav-lock">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7.5" rx="1"/><path d="M5.2 7V5a2.8 2.8 0 0 1 5.6 0v2"/></svg>
+          <span data-i18n="nav.exclusive">Exklusiv</span>
+        </a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="lang" role="group" aria-label="Sprache / Language">
+          <button type="button" data-lang="de" aria-pressed="true">DE</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span class="sr" data-i18n="nav.menu">Menü</span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation" hidden>
+      <a href="#/editionen" data-i18n="nav.editions">Editionen</a>
+      <a href="#/archiv" data-i18n="nav.archive">Archiv</a>
+      <a href="#/exklusiv"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7.5" rx="1"/><path d="M5.2 7V5a2.8 2.8 0 0 1 5.6 0v2"/></svg><span data-i18n="nav.exclusive">Exklusiv</span></a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="view" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <svg class="logo logo--small" viewBox="0 0 230 80" aria-hidden="true" focusable="false"><use href="#enecs-logo"/></svg>
+        <p class="footer-claim" data-i18n="footer.claim">Magazin für Architektur &amp; Ökologie – Südtirol, Schweiz, Liechtenstein, Deutschland.</p>
+      </div>
+      <div class="footer-links">
+        <button type="button" class="linklike" data-legal="imprint" data-i18n="footer.imprint">Impressum</button>
+        <button type="button" class="linklike" data-legal="privacy" data-i18n="footer.privacy">Datenschutz</button>
+        <a href="https://visionbaukunst.com/" target="_blank" rel="noopener">Vision Baukunst</a>
+      </div>
+      <p class="footer-data" id="footer-data"></p>
+    </div>
+    <div class="wrap preview-line">Preview for Enecs — Artur Vasilyan, <a href="https://vasylian.com" target="_blank" rel="noopener">vasylian.com</a></div>
+  </footer>
+
+  <div class="drawer" id="legal" hidden>
+    <div class="drawer-backdrop" data-close></div>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="legal-title">
+      <button type="button" class="drawer-close" data-close aria-label="Schließen">&times;</button>
+      <div class="drawer-body" id="legal-body"></div>
+    </aside>
+  </div>
+
+  <script src="data/archive.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
